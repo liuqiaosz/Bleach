@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--服务器配置-->
+<cfgServer>
+        
+    <cfgProperties>
+        
+        <cfgPropertie name="Client" 
+             path="/WEB-INF/cfg/BleachClient.xml" 
+             parser="bleach.server.cfg.parser.BleachClientCfgParser" 
+             desc="客户端配置" />
+        
+        <cfgPropertie name="ClientResource" 
+             path="/WEB-INF/cfg/BleachResource.xml" 
+             parser="bleach.server.cfg.parser.BleachCfgResourceParser" 
+             desc="客户端资源" />
+        
+        <cfgPropertie name="Protocol" 
+             path="/WEB-INF/cfg/BleachProtocol.xml" 
+             parser="bleach.server.cfg.parser.BleachCfgProtocolParser" 
+             desc="通讯协议" />
+        
+    </cfgProperties>
+        
+</cfgServer>

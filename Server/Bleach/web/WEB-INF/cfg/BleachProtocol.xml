@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<cfgProtocol>
+    
+    <protocol type="TCP" action="">
+        <!--协议初始化参数-->
+        <initParam>
+            <!--监听端口-->
+            <param name="listener" value="9011" />
+            <!--数据编码-->
+            <param name="charset" value="UTF-8" />
+        </initParam>
+    </protocol>
+    
+</cfgProtocol>

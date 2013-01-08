@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--客户端配置-->
+<cfgClient>
+    <!--主程序配置-->
+    <cfgNode name="main_version">
+        <param name="version" value="0.1"/>
+        <!--
+        <param name="url" value="http://localhost:8080/bleach/getswf/app"/>
+        -->
+        <param name="source" value="" />
+    </cfgNode>
+
+    <!--共享库配置-->
+    <cfgNode name="rsl_version">
+        <param name="version" value="0.1"/>
+        <!--
+        <param name="url" value="http://localhost:8080/bleach/getswf/rsl"/>
+        -->
+        <param name="source" value="" />
+    </cfgNode>
+
+    <!--通讯消息库配置-->
+    <cfgNode name="msg_version">
+        <param name="version" value="0.1"/>
+        <!--
+        <param name="url" value="http://localhost:8080/bleach/getswf/msg"/>
+        -->
+        <param name="source" value="" />
+    </cfgNode>
+</cfgClient>

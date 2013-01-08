@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    不需要授权较验的逻辑定义
+    
+    针对具体请求命令的逻辑定义
+    http://www.xxx.com/bleach/命令/具体逻辑  
+    command == 命令
+-->
+<logic>
+    
+    <!--
+        客户端加载命令
+        
+        app:    主程序加载
+        rsl:    共享库加载
+        msg:    消息库加载
+    -->
+    <logicCommand command="getswf">
+        <process id="app" class="" />
+        <process id="rsl" class="" />
+        <process id="msg" class="" />
+    </logicCommand>
+    
+</logic>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--资源定义-->
+<cfgResource>
+    <!--纹理数据-->
+    <textures>
+        <texture name="texture1" version="0.1" source="texture.tpl" />
+    </textures>
+
+    <!--场景数据定义-->
+    <worlds>
+        <!--现世-->
+        <world name="Karakurachou">
+            <scene name="level1" version="0.1" source="L1" />
+            <scene name="level2" version="0.1" source="L2" />
+            <scene name="level3" version="0.1" source="L3" />
+        </world>
+    </worlds>
+        
+    <!--UI数据定义-->
+    <uis>
+        <ui name="sampleui" version="0.1" source="ui.mod" />
+    </uis>
+</cfgResource>
