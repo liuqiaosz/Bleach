@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.apache.commons.lang.StringUtils;
 
 /*
  * To change this template, choose Tools | Templates
@@ -20,12 +21,20 @@ public class Test
     {
         try
         {
-            fileTest();
+            strTest();
         }
         catch (Exception ex)
         {
             Logger.getLogger(Test.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+    
+    public static void strTest()
+    {
+        String v = "vv";
+        
+        v = StringUtils.leftPad(v, 10, " ");
+        System.out.println(v);
     }
 
     public static void fileTest()throws Exception

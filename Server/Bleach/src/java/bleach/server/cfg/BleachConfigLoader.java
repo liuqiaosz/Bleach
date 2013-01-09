@@ -44,6 +44,10 @@ public class BleachConfigLoader
         Document doc = reader.read(cfg);
         Element docRoot = doc.getRootElement();
         
+        Element serviceWorkerNode = docRoot.element(Constants.XML_NODE_SERVICEWORKER);
+        BleachCfg.setHttpServiceWorker(serviceWorkerNode.elementTextTrim(Constants.XML_NODE_HTTPSW));
+        BleachCfg.setTcpServiceWorker(serviceWorkerNode.elementTextTrim(Constants.XML_NODE_TCPSW));
+        
         Element propertiesNode = docRoot.element(Constants.XML_NODE_CFGPROPERTIES);
         Iterator propertieIt = propertiesNode.elementIterator();
         while(propertieIt.hasNext())
@@ -74,20 +78,9 @@ public class BleachConfigLoader
                 logger.error("加载异常");
                 logger.error(ex,ex);
             }
-            
         }
         
-//        logger.info("客户端配置加载...");
-//        //客户端配置加载
-//        Element clientNode = docRoot.element(Constants.XML_NODE_CLIENT);
-//        BleachCfg.setClient(clientParse(clientNode));
-//        
-//        logger.info("资源配置加载...");
-//        //资源定义加载
-//        Element resourceNode = docRoot.element(Constants.XML_NODE_RESOURCE);
-//        BleachCfg.setResource(resourceParse(resourceNode));
-//        
-//        logger.info("加载完毕...");
+        logger.info("主配置加载完毕...");
     }
     
     /**

@@ -15,12 +15,12 @@ import org.dom4j.io.SAXReader;
 public abstract class BleachGenericParser implements IBleachParser
 {
     @Override
-    public final void parse(String path)throws Exception
+    public final Object parse(String path)throws Exception
     {
         SAXReader reader = new SAXReader();
         Document doc = reader.read(path);
-        process(doc);
+        return process(doc);
     }
     
-    abstract protected void process(Document doc)throws Exception;
+    abstract protected Object process(Document doc)throws Exception;
 }

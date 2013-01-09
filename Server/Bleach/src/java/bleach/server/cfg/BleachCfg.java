@@ -5,8 +5,9 @@
 package bleach.server.cfg;
 
 import bleach.server.cfg.vo.CfgClient;
-import bleach.server.cfg.vo.CfgProtocol;
+import bleach.server.cfg.vo.CfgLogic;
 import bleach.server.cfg.vo.CfgResource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,7 +18,10 @@ public class BleachCfg
 {
     private static CfgClient client = null;
     private static CfgResource resource = null;
-    private static List<CfgProtocol> protocols = null;
+    //private static List<CfgProtocol> protocols = null;
+    private static CfgLogic logic = null;
+    private static String httpServiceWorker = "";
+    private static String tcpServiceWorker = "";
 
     /**
      * @return the client
@@ -52,20 +56,68 @@ public class BleachCfg
     }
 
     /**
-     * @return the protocols
+     * @return the logic
      */
-    public static List<CfgProtocol> getProtocols() 
+    public static CfgLogic getLogic()
     {
-        return protocols;
+        return logic;
     }
 
     /**
-     * @param aProtocols the protocols to set
+     * @param aLogic the logic to set
      */
-    public static void setProtocols(List<CfgProtocol> value) 
+    public static void setLogic(CfgLogic aLogic)
     {
-        protocols = value;
+        logic = aLogic;
     }
+
+    /**
+     * @return the httpServiceWorker
+     */
+    public static String getHttpServiceWorker()
+    {
+        return httpServiceWorker;
+    }
+
+    /**
+     * @param aHttpServiceWorker the httpServiceWorker to set
+     */
+    public static void setHttpServiceWorker(String aHttpServiceWorker)
+    {
+        httpServiceWorker = aHttpServiceWorker;
+    }
+
+    /**
+     * @return the tcpServiceWorker
+     */
+    public static String getTcpServiceWorker()
+    {
+        return tcpServiceWorker;
+    }
+
+    /**
+     * @param aTcpServiceWorker the tcpServiceWorker to set
+     */
+    public static void setTcpServiceWorker(String aTcpServiceWorker)
+    {
+        tcpServiceWorker = aTcpServiceWorker;
+    }
+
     
     
+    /**
+     * @return the protocols
+     */
+//    public static List<CfgProtocol> getProtocols() 
+//    {
+//        return protocols;
+//    }
+//
+//    /**
+//     * @param aProtocols the protocols to set
+//     */
+//    public static void setProtocols(List<CfgProtocol> value) 
+//    {
+//        protocols = value;
+//    }
 }

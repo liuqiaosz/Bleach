@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    不需要授权较验的逻辑定义
+    
+    针对具体请求命令的逻辑定义
+    http://www.xxx.com/bleach/命令/具体逻辑  
+    command == 命令
+-->
+<logic parser="bleach.server.logic.msg.CommandMessageParser">
+    <command id="001" process="bleach.server.logic.LogicAccountCreate" desc="Register account" auth="false">
+        <!--请求参数-->
+        <request>
+            <attr name="accName" length="20" />
+            <attr name="accPwd" length="12" />
+            <attr name="nickName" length="30" />
+        </request>
+        
+        <!--返回参数-->
+        <response>
+            <attr name="respCode" length="4" />
+        </response>
+    </command>
+</logic>

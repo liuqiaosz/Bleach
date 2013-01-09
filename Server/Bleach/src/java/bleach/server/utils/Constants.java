@@ -40,6 +40,22 @@ public class Constants
     public static final String XML_NODE_PATH = "path";
     public static final String XML_NODE_DESC = "desc";
     public static final String XML_NODE_PARSER = "parser";
+    public static final String XML_NODE_ID = "id";
+    public static final String XML_NODE_PROCESS = "process";
+    public static final String XML_NODE_LOGIC = "logic";
+    public static final String XML_NODE_AUTH = "auth";
+    public static final String XML_NODE_REQ = "request";
+    public static final String XML_NODE_RESP = "response";
+    public static final String XML_NODE_LENGTH = "length";
+    public static final String XML_NODE_REQUIRED = "required";
+    public static final String XML_NODE_SERVICEWORKER = "serviceWorker";
+    public static final String XML_NODE_HTTPSW = "httpServiceWorker";
+    public static final String XML_NODE_TCPSW = "tcpServiceWorker";
+    
+    public static final String STR_HTTP = "http";
+    public static final String STR_TCP = "tcp";
+    public static final String STR_BLANK = " ";
+    public static final String STR_ZERO = "0";
     private Constants()
     {}
 }

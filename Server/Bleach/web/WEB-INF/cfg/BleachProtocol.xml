@@ -6,15 +6,24 @@ and open the template in the editor.
 
 
 <cfgProtocol>
-    
-    <protocol type="TCP" action="">
+    <protocol type="HTTP" action="">
         <!--协议初始化参数-->
         <initParam>
-            <!--监听端口-->
-            <param name="listener" value="9011" />
+            <!--监听端口 type="TCP"时该值有效
+            
+                <param name="listener" value="9011" />
+            -->
+            
             <!--数据编码-->
             <param name="charset" value="UTF-8" />
+            <param name="filter" value="xxx.xxx.xxx" />
+            
         </initParam>
+        
+        <!--协议对应的逻辑配置-->
+        <logic parser="bleach.server.cfg.parser.BleachLogicParser">
+            <param value="/WEB-INF/cfg/logic/Unauthlogic.xml" />
+        </logic>
     </protocol>
     
 </cfgProtocol>

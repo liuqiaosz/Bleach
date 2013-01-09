@@ -2,9 +2,18 @@
 
 <!--服务器配置-->
 <cfgServer>
+    
+    <serviceWorker>
+        <httpServiceWorker>
+            bleach.server.core.service.BleachHttpServiceWorker
+        </httpServiceWorker>
         
+        <tcpServiceWorker>
+            
+        </tcpServiceWorker>
+    </serviceWorker>
+    
     <cfgProperties>
-        
         <cfgPropertie name="Client" 
              path="/WEB-INF/cfg/BleachClient.xml" 
              parser="bleach.server.cfg.parser.BleachClientCfgParser" 
@@ -14,11 +23,17 @@
              path="/WEB-INF/cfg/BleachResource.xml" 
              parser="bleach.server.cfg.parser.BleachCfgResourceParser" 
              desc="客户端资源" />
-        
+        <!--
         <cfgPropertie name="Protocol" 
              path="/WEB-INF/cfg/BleachProtocol.xml" 
              parser="bleach.server.cfg.parser.BleachCfgProtocolParser" 
              desc="通讯协议" />
+        -->
+        
+        <cfgPropertie name="Logic" 
+             path="/WEB-INF/cfg/BleachLogic.xml" 
+             parser="bleach.server.cfg.parser.BleachLogicParser" 
+             desc="逻辑" />
         
     </cfgProperties>
         

@@ -4,7 +4,9 @@
  */
 package bleach.server.cfg.vo;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,10 +18,12 @@ public class CfgProtocol
     private String type = "";
     private String action = "";
     private Map<String,String> initParam = null;
+    private List<CfgLogic> logics = null;
     
     public CfgProtocol()
     {
         initParam = new HashMap<String,String>();
+        logics = new ArrayList<CfgLogic>();
     }
     
     public CfgProtocol(String type,String action)
@@ -27,6 +31,7 @@ public class CfgProtocol
         this.type = type;
         this.action = action;
         initParam = new HashMap<String,String>();
+        logics = new ArrayList<CfgLogic>();
     }
 
     /**
@@ -84,5 +89,26 @@ public class CfgProtocol
     public String getInitParam(String name)
     {
         return initParam.get(name);
+    }
+
+    /**
+     * @return the logics
+     */
+    public List<CfgLogic> getLogics()
+    {
+        return logics;
+    }
+
+    /**
+     * @param logics the logics to set
+     */
+    public void setLogics(List<CfgLogic> logics)
+    {
+        this.logics = logics;
+    }
+    
+    public void addLogic(CfgLogic logic)
+    {
+        this.logics.add(logic);
     }
 }

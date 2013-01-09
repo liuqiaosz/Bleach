@@ -25,7 +25,7 @@ public class BleachCfgResourceParser extends BleachGenericParser
 {
 
     @Override
-    protected void process(Document doc) throws Exception 
+    protected Object process(Document doc) throws Exception 
     {
         Element resourceNode = doc.getRootElement();
         CfgResource resource = new CfgResource();
@@ -39,6 +39,7 @@ public class BleachCfgResourceParser extends BleachGenericParser
         resource.setUis(uiParse(uisNode));
         
         BleachCfg.setResource(resource);
+        return resource;
     }
     
     /**

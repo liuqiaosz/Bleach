@@ -8,7 +8,7 @@ package bleach.server.cfg.parser;
  *
  * @author LiuQiao
  */
-public interface IBleachParser 
+public interface IBleachParser
 {
-    public void parse(String path)throws Exception;
+    public Object parse(String path)throws Exception;
 }

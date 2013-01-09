@@ -21,7 +21,7 @@ import org.dom4j.io.SAXReader;
 public class BleachClientCfgParser extends BleachGenericParser
 {
     @Override
-    protected void process(Document doc) throws Exception 
+    protected Object process(Document doc) throws Exception 
     {
         Element root = doc.getRootElement();
         
@@ -48,6 +48,7 @@ public class BleachClientCfgParser extends BleachGenericParser
             client.addNode(node);
         }
         BleachCfg.setClient(client);
+        return client;
     }
     
 }
