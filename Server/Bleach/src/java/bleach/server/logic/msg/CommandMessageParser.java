@@ -22,7 +22,7 @@ public class CommandMessageParser implements ICommandMessageParser
 {
     private Logger logger = Logger.getLogger(CommandMessageParser.class.getName());
     @Override
-    public Message encode(CfgCommand command,byte[] source) throws InvalidMessageFormatException
+    public Message decode(CfgCommand command,byte[] source) throws InvalidMessageFormatException
     {
         try
         {
@@ -51,16 +51,17 @@ public class CommandMessageParser implements ICommandMessageParser
     }
 
     @Override
-    public byte[] decode(CfgCommand command,Message message) throws InvalidMessageFormatException
+    public byte[] encode(CfgCommand command,ResponseMessage message) throws InvalidMessageFormatException
     {
         try
         {
-            List<CfgAttr> attrs = command.getRequest();
+            List<CfgAttr> attrs = command.getResponse();
             CfgAttr attr = null;
             StringBuilder str = new StringBuilder();
             String attrValue = "";
 
             str.append(command.getId());
+            str.append(message.getRespCode());
             for (int idx = 0; idx < attrs.size(); idx++)
             {
                 attr = attrs.get(idx);

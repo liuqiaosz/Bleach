@@ -5,7 +5,9 @@
 package bleach.server.cfg.vo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -14,10 +16,11 @@ import java.util.List;
 public class CfgClient 
 {
     private List<CfgNode> nodes = null;
-    
+    private Map<String,CfgNode> nodeMap = null;
     public CfgClient()
     {
         nodes = new ArrayList<CfgNode>();
+        nodeMap = new HashMap<String,CfgNode>();
     }
 
     /**
@@ -39,5 +42,24 @@ public class CfgClient
     public void addNode(CfgNode node)
     {
         nodes.add(node);
+        getNodeMap().put(node.getName(), node);
     }
+
+    /**
+     * @return the nodeMap
+     */
+    public Map<String,CfgNode> getNodeMap()
+    {
+        return nodeMap;
+    }
+
+    /**
+     * @param nodeMap the nodeMap to set
+     */
+    public void setNodeMap(Map<String,CfgNode> nodeMap)
+    {
+        this.nodeMap = nodeMap;
+    }
+    
+    
 }

@@ -21,4 +21,18 @@
             <attr name="respCode" length="4" />
         </response>
     </command>
+    
+    <command id="002" process="bleach.server.logic.LogicGetClientConfig" desc="Get configure" auth="false">
+        <!--请求参数-->
+        <request>
+            
+        </request>
+        
+        <!--返回参数-->
+        <response>
+            <attr name="main_version" length="3" />
+            <attr name="rsl_version" length="3" />
+            <attr name="msg_version" length="3" />
+        </response>
+    </command>
 </logic>

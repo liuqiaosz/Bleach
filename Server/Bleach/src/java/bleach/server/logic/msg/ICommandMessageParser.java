@@ -13,6 +13,6 @@ import bleach.server.exception.InvalidMessageFormatException;
  */
 public interface ICommandMessageParser
 {
-    Message encode(CfgCommand command,byte[] source)throws InvalidMessageFormatException;
-    byte[] decode(CfgCommand command,Message message)throws InvalidMessageFormatException;
+    Message decode(CfgCommand command,byte[] source)throws InvalidMessageFormatException;
+    byte[] encode(CfgCommand command,ResponseMessage message)throws InvalidMessageFormatException;
 }

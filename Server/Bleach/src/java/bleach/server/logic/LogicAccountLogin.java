@@ -5,6 +5,7 @@
 package bleach.server.logic;
 
 import bleach.server.logic.msg.Message;
+import bleach.server.logic.msg.ResponseMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -16,7 +17,7 @@ public class LogicAccountLogin extends LogicGeneric
 {
 
     @Override
-    public Message execute(Message message,HttpServletRequest request, HttpServletResponse response)
+    public ResponseMessage execute(Message message,HttpServletRequest request, HttpServletResponse response)
     {
         return null;
     }

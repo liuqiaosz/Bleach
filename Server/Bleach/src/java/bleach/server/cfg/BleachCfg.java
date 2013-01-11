@@ -7,8 +7,6 @@ package bleach.server.cfg;
 import bleach.server.cfg.vo.CfgClient;
 import bleach.server.cfg.vo.CfgLogic;
 import bleach.server.cfg.vo.CfgResource;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *

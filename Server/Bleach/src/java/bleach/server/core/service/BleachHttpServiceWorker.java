@@ -12,6 +12,7 @@ import bleach.server.exception.InvalidAuthException;
 import bleach.server.exception.InvalidCommandException;
 import bleach.server.logic.ILogic;
 import bleach.server.logic.msg.Message;
+import bleach.server.logic.msg.ResponseMessage;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.ByteBuffer;
@@ -102,11 +103,11 @@ public class BleachHttpServiceWorker extends BleachServiceWorker implements IBle
                 }
             }
                 
-            Message requestMsg = encode(command, body);
+            Message requestMsg = decode(command, body);
             ILogic workLogic;
             workLogic = (ILogic) Class.forName(command.getProcess()).newInstance();
-            Message responseMsg = workLogic.execute(requestMsg, request, response);
-            byte[] responseData = decode(command, responseMsg);
+            ResponseMessage responseMsg = workLogic.execute(requestMsg, request, response);
+            byte[] responseData = encode(command, responseMsg);
             writer = response.getOutputStream();
             writer.write(responseData);
             writer.flush();

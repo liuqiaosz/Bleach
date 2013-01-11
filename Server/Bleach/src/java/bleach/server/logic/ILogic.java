@@ -5,6 +5,7 @@
 package bleach.server.logic;
 
 import bleach.server.logic.msg.Message;
+import bleach.server.logic.msg.ResponseMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -14,5 +15,5 @@ import javax.servlet.http.HttpServletResponse;
  */
 public interface ILogic
 {
-    Message execute(Message message,HttpServletRequest request, HttpServletResponse response);
+    ResponseMessage execute(Message message,HttpServletRequest request, HttpServletResponse response);
 }

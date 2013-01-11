@@ -10,6 +10,7 @@ import bleach.server.cfg.vo.CfgLogic;
 import bleach.server.exception.InvalidMessageFormatException;
 import bleach.server.logic.msg.ICommandMessageParser;
 import bleach.server.logic.msg.Message;
+import bleach.server.logic.msg.ResponseMessage;
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -51,12 +52,12 @@ public abstract class BleachServiceWorker
         return true;
     }
     
-    protected Message encode(CfgCommand command,byte[] source)throws Exception
+    protected Message decode(CfgCommand command,byte[] source)throws Exception
     {
-        return parser.encode(command, source);
+        return parser.decode(command, source);
     }
-    protected byte[] decode(CfgCommand command,Message message)throws InvalidMessageFormatException
+    protected byte[] encode(CfgCommand command,ResponseMessage message)throws InvalidMessageFormatException
     {
-        return parser.decode(command, message);
+        return parser.encode(command, message);
     }
 }

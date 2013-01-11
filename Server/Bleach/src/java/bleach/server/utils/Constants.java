@@ -56,6 +56,10 @@ public class Constants
     public static final String STR_TCP = "tcp";
     public static final String STR_BLANK = " ";
     public static final String STR_ZERO = "0";
+    
+    public static final String MSG_MAIN_VER = "main_version";
+    public static final String MSG_RSL_VER = "rsl_version";
+    public static final String MSG_MSG_VER = "msg_version";
     private Constants()
     {}
 }

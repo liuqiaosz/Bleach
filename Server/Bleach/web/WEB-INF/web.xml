@@ -10,7 +10,7 @@
     
     <servlet-mapping>
         <servlet-name>Bleach</servlet-name>
-        <url-pattern>/portal/*</url-pattern>
+        <url-pattern>/service/*</url-pattern>
     </servlet-mapping>
     
     <filter>   
@@ -24,7 +24,7 @@
      
     <filter-mapping>   
         <filter-name>ServiceFilter</filter-name>   
-        <url-pattern>/portal/*</url-pattern>   
+        <url-pattern>/service/*</url-pattern>   
     </filter-mapping>
     
     <session-config>

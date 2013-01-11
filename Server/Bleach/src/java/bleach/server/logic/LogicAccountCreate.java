@@ -5,6 +5,7 @@
 package bleach.server.logic;
 
 import bleach.server.logic.msg.Message;
+import bleach.server.logic.msg.ResponseMessage;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.log4j.Logger;
@@ -17,7 +18,7 @@ public class LogicAccountCreate extends LogicGeneric
 {
     private Logger logger = Logger.getLogger(LogicAccountCreate.class.getName());
     @Override
-    public Message execute(Message message,HttpServletRequest request, HttpServletResponse response)
+    public ResponseMessage execute(Message message,HttpServletRequest request, HttpServletResponse response)
     {
         logger.info(message.getParam("accName"));
         logger.info(message.getParam("accPwd"));
