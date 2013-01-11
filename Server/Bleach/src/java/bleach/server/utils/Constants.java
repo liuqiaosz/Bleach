@@ -51,11 +51,18 @@ public class Constants
     public static final String XML_NODE_SERVICEWORKER = "serviceWorker";
     public static final String XML_NODE_HTTPSW = "httpServiceWorker";
     public static final String XML_NODE_TCPSW = "tcpServiceWorker";
+    public static final String XML_NODE_CLIENT_GLOBAL = "client_global";
+    public static final String XML_NODE_SERVERURL = "server_url";
+    public static final String XML_NODE_LIBURL = "library_url";
     
     public static final String STR_HTTP = "http";
     public static final String STR_TCP = "tcp";
     public static final String STR_BLANK = " ";
     public static final String STR_ZERO = "0";
+    public static final String STR_POST = "POST";
+    public static final String STR_GET = "GET";
+    
+    public static final String HTTP_PARAM_COMM = "command";
     
     public static final String MSG_MAIN_VER = "main_version";
     public static final String MSG_RSL_VER = "rsl_version";

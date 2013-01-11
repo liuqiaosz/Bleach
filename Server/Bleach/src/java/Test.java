@@ -31,10 +31,12 @@ public class Test
     
     public static void strTest()
     {
-        String v = "vv";
+        int i = 7;
         
-        v = StringUtils.leftPad(v, 10, " ");
-        System.out.println(v);
+        System.out.println(Integer.toBinaryString(i));
+        i = i ^ 3;
+        System.out.println(Integer.toBinaryString(i));
+        
     }
 
     public static void fileTest()throws Exception

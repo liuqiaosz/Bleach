@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<lib allowDomain="*">
+	<bitmapdata file="image/loadColor.png" compression="true" class="image.loadColor"/>
+	<bitmapdata file="image/loadWhite.png" compression="true" class="image.loadWhite"/>
+</lib>
