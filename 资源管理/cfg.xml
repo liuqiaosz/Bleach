@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<lib allowDomain="*">
+<lib>
 	<bitmapdata file="image/loadColor.png" compression="true" class="image.loadColor"/>
 	<bitmapdata file="image/loadWhite.png" compression="true" class="image.loadWhite"/>
+	<bytearray file="ui/login.mod" class="ui.login"/>
 </lib>
