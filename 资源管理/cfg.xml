@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <lib>
-	<bitmapdata file="image/loadColor.png" compression="true" class="image.loadColor"/>
-	<bitmapdata file="image/loadWhite.png" compression="true" class="image.loadWhite"/>
-	<bytearray file="ui/login.mod" class="ui.login"/>
+	<bitmapdata file="image/loadColor.png" class="image.loadColor"/>
+	<bitmapdata file="image/loadWhite.png" class="image.loadWhite"/>
+	
+	<bytearray file="/Users/LiuQiao/Documents/Developer/Code/flash/Bleach/Bleach.xml" class="BleachXML"/>
 </lib>
