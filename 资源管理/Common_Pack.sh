@@ -1,0 +1,1 @@
+java -jar Swift.jar xml2lib CfgCommon.xml commlib.swf
