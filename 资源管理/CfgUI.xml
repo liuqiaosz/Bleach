@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <lib>
-	<bytearray file="ui/login/login.mod" class="ui.login"/>
-	<bytearray file="ui/choose_role/choose_role.mod" class="ui.chooserole"/>
+	<bytearray file="login/login.mod" class="ui.login"/>
+	<bytearray file="choose_role/choose_role.mod" class="ui.chooserole"/>
 </lib>
