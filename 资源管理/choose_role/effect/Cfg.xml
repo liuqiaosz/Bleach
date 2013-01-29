@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<lib>
+	<bytearray file="choose_role/effect/RolePower.tpk" class="effect.rolepower"/>
+</lib>

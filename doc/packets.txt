@@ -1,0 +1,70 @@
+包结构
+|packet_length|  id  |packet|
+    int32      int32   ?
+    
+1 = CM_HeartBeat {
+	int64 timestamp;//当前时间戳
+}
+2 = SM_HeartBeat {
+	int64 timestamp;
+}
+3 = CM_Login {
+	String account;
+	String password;
+}
+4 = SM_Login {
+	int16 responseCode;//0表示处理成功；非零表示出错，接下来的字节忽略
+	player_detail;
+	hero_detail[];
+}
+5 = CM_EnterGameCenter {
+}
+6 = SM_EnterGameCenter {
+	int16 responseCode;//
+	byte section;    //频道
+	int16 totalPage;//总共的房间页数
+	room_info[];	//注意这里要先读长度
+}
+7 = CM_GetRoomList {//我想这个除了玩家主动翻页，客户端也需要几秒调用一次，保证房间的信息同步
+	int16 page;
+	byte section;	//频道
+}
+8 = SM_GetRoomList {
+	int16 responseCode;
+	int16 page;
+	byte section;
+	int16 totalPage;//总共的房间页数
+	room_info[];//注意这里要先读长度
+}
+9 = CM_CreateRoom {
+	byte type;
+	int16 mapId;
+	String password;
+	String desc;//描述或者叫名字,无密码，传个长度0
+	byte playerNum;//开放的槽位[1,4]
+}
+10 = SM_CreateRoom {
+	room_detail;
+}
+//选择频道
+11 = CM_SelectSection {
+	byte section;
+}
+12 = SM_SelectSection {
+	int16 responseCode;
+	int16 page;
+	byte section;
+	int16 totalPage;//总共的房间页数
+	room_info[];//注意这里要先读长度
+}
+//选择英雄
+13 = CM_SelectHero {
+	int32 heroId;
+}
+14 = SM_SelectHero {
+	int16 responseCode;
+	int16 page;
+	byte section;
+	int16 totalPage;//总共的房间页数
+	room_info[];//注意这里要先读长度
+}
