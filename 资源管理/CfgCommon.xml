@@ -3,6 +3,8 @@
 <lib>
 	<bitmapdata file="image/loadColor.png" class="image.loadColor"/>
 	<bitmapdata file="image/loadWhite.png" class="image.loadWhite"/>
+	<bitmapdata file="image/Scrollarrow.png" class="image.scrollArrow"/>
+	<bitmapdata file="image/Scrollhandler.png" class="image.scrollHandler"/>
 	
 	<bytearray file="/Users/LiuQiao/Documents/Developer/Code/flash/Bleach/Bleach.xml" class="BleachXML"/>
 </lib>
