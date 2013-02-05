@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf8"?>
+
+<root>
+  <element rescode="0" desc="成功"/>
+  <element rescode="1" desc="失败"/>
+  <element rescode="10" desc="您还没有登录"/>
+</root>

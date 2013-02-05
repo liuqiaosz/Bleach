@@ -1,0 +1,52 @@
+player_detail = {
+	int32  id;
+	String account;
+    String name;
+    byte   gender;
+    String icon;			//头像资源
+    int32    gold;            //金币
+    int32    silver;          //银币
+}
+hero_detail = {
+	int32  id;
+	String name;                       //如果是主将，跟主角名相同
+    byte   type;                       //类型，攻击型，防御型，灵压型
+    byte   level;
+    int16  exp;                        //32768
+    byte   isMainHero; 				   //是否为主将
+    int16  health;                     //体制
+    int16  strength;                   //力量
+    int16  lingya;                     //灵压--决定先手
+    int16  hp;
+    int16  attack;                     //攻击力
+    int16  defence;                    //物理防御
+    float  CRI;                        //暴击率
+    float  AKR;                        //防爆率
+    int16  wakan;  						//灵力
+    int16  anger;						//怒气
+    int16  fightingStrength;            //战斗力
+    byte   section;                     //默认的频道
+}
+room_info = {
+	int32 id;
+	byte type;	//竞技还是挑战1,竞技 2,挑战
+	int16 mapId;	//==0随机地图
+	byte limit;	//人数上限
+	byte playerNum;		//已有的人数
+	byte needPassword; //是否需要密码,1需要 2,不需要
+}
+//房间坑位示意图
+//+----------------------+
+//|主场                  |客场                  |
+//|----------------------|
+//|0号坑|1号坑|4号坑|5号坑|
+//|2号坑|3号坑|6号坑|7号坑|
+//+----------------------+
+room_detail = {
+	room_info;
+	byte[4] slotsStatus;//表明长度的数组无需再读长度，表示房间坑位开关状态。1打开2关闭
+	[]{
+		byte slotId;//坑号
+		player_detail;//对于的玩家信息
+	}
+}

@@ -1,0 +1,77 @@
+//包结构
+//|packet_length|  id  |packet|
+//    int32      int32   ?
+
+1 = CM_HeartBeat {
+	int64 timestamp;//当前时间戳
+}
+2 = SM_HeartBeat {
+	int64 timestamp;
+}
+//0表示处理成功；非零表示出错，接下来的字节忽略,具体错误内容生成xml。
+3 = SM_Error {
+	int16 responseCode;
+}
+
+101 = CM_CheckAccount {
+	String account;
+	String password;
+}
+102 = SM_CheckAccount {
+	int16 responseCode;
+	byte isNew;//是否新用户
+}
+103 = CM_CreatePlayer {
+	String name;//主将名或者主角名
+	int16 templateId;主将模板ID
+}
+104 = SM_CreatePlayer {
+	int16 responseCode;
+}
+105 = CM_Login {
+}
+106 = SM_Login {
+	int16 responseCode;
+	player_detail;
+	hero_detail[];
+}
+//进入游戏大厅
+107 = CM_EnterGameCenter {
+}
+108 = SM_EnterGameCenter {
+	int16 responseCode;//
+	byte section;    //频道
+	int16 totalPage;//总共的房间页数
+	room_info[];	//注意这里要先读长度
+}
+109 = CM_GetRoomList {//我想这个除了玩家主动翻页，客户端也需要几秒调用一次，保证房间的信息同步
+	int16 page;
+}
+110 = SM_GetRoomList {
+	int16 responseCode;
+	int16 page;
+	byte section;
+	int16 totalPage;//总共的房间页数
+	room_info[];//注意这里要先读长度
+}
+111 = CM_CreateRoom {
+	byte type;
+	int16 mapId;
+	String password;
+	String desc;//描述或者叫名字,无密码，传个长度0
+	byte playerNum;//开放的槽位[1,4]
+}
+112 = SM_CreateRoom {
+	room_detail;
+}
+//选择频道
+113 = CM_SelectSection {
+	byte section;
+}
+114 = SM_SelectSection {
+	int16 responseCode;
+	int16 page;
+	byte section;
+	int16 totalPage;//总共的房间页数
+	room_info[];//注意这里要先读长度
+}
