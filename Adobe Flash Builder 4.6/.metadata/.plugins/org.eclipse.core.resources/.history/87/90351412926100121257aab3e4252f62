@@ -1,0 +1,9 @@
+package bleach.communicator
+{
+	public class NetMessageObserver
+	{
+		public function NetMessageObserver()
+		{
+		}
+	}
+}

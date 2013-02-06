@@ -1,0 +1,14 @@
+package bleach.communicator
+{
+	/**
+	 * 网络消息观察者
+	 * 
+	 **/
+	public class NetObserver
+	{
+		public function NetObserver()
+		{
+		}
+	}
+}
+

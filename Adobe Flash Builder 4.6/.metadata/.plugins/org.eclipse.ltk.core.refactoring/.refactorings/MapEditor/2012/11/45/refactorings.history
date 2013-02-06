@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“MapEditor/assets/CycleIcon.png”重命名为“RecycleIcon.png”" description="重命名资源“CycleIcon.png”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="assets/CycleIcon.png" name="RecycleIcon.png" stamp="1352293648496" updateReferences="true"/>
+</session>

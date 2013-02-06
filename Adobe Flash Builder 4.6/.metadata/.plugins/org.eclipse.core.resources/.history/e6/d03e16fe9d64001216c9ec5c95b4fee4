@@ -1,0 +1,14 @@
+package pixel.ui.control
+{
+	import pixel.ui.core.PixelUINS;
+
+	use namespace PixelUINS;
+	
+	public class UICheckButton extends UIControl
+	{
+		public function UICheckButton(style:Class = null)
+		{
+			super(style ? style:UICheckButtonStyle);
+		}
+	}
+}

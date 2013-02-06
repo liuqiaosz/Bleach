@@ -1,0 +1,37 @@
+package pixel.ui.control
+{
+	import flash.events.MouseEvent;
+	
+	import pixel.ui.control.style.UIRadioStyle;
+
+	public class UIRadio extends UIControl
+	{
+		private var _inlineSize:int = 2;
+		public function set inlineSize(value:int):void
+		{
+			_inlineSize = value;
+		}
+		public function get inlineSize():int
+		{
+			return _inlineSize;
+		}
+		private var _frameSize:int = 6;
+		public function set frameSize(value:int):void
+		{
+			_frameSize = value;
+		}
+		public function get frameSize():int
+		{
+			return _frameSize;
+		}
+			
+		public function UIRadio(skin:Class = null)
+		{
+			super(skin ? skin : UIRadioStyle);
+			this.addEventListener(MouseEvent.MOUSE_MOVE,onRadioFocus);
+		}
+		
+		protected function onRadioFocus(event:MouseEvent):void
+		{}
+	}
+}

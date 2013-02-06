@@ -1,0 +1,9 @@
+package bleach.module.message
+{
+	public class MsgResponse extends MsgGeneric
+	{
+		public function MsgResponse()
+		{
+		}
+	}
+}

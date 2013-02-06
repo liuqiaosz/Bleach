@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="true" key="com.adobe.flexbuilder.project.ui.use.default.location"/>
+	<item value="true" key="com.adobe.flexbuilder.project.ui.last.apptype"/>
+	<item value="" key="com.adobe.flexbuilder.project.ui.last.java.javasrc"/>
+	<item value="0" key="com.adobe.flexbuilder.project.ui.last.server.type"/>
+	<section name="com.adobe.flexbuilder.help.ModulesPropertyPage">
+		<item value="167" key="outputSWFColumnWidth"/>
+		<item value="0" key="sortColumnIndex"/>
+		<item value="225" key="moduleColumnWidth"/>
+		<item value="true" key="sortColumnAscending"/>
+		<item value="125" key="optimizeColumnWidth"/>
+	</section>
+	<section name="ExportSigningOptions">
+		<list key="certificates">
+			<item value="/Users/LiuQiao/Documents/Developer/Code/flash/Project/Death/AIR证书.p12"/>
+			<item value=""/>
+		</list>
+	</section>
+	<section name="ADD_MODULE_DIALOG_SECTION">
+		<item value="392" key="DIALOG_WIDTH"/>
+		<item value="203" key="DIALOG_Y_ORIGIN"/>
+		<item value="263" key="DIALOG_HEIGHT"/>
+		<item value="209" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|13.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

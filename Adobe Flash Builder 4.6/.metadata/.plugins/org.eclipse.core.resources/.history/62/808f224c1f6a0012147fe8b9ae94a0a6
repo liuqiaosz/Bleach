@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="pixel.ui.control.UIComboboxItem"/>
+    <classEntry path="pixel.ui.control.UIComboboxPop"/>
+    <classEntry path="pixel.ui.control.IUIScroller"/>
+    <classEntry path="pixel.ui.control.UIVerticalScroller"/>
+    <classEntry path="pixel.ui.control.style.UIVerticalScrollerStyle"/>
+    <classEntry path="pixel.ui.control.style.UIVerticalPanelStyle"/>
+    <classEntry path="pixel.ui.control.style.UIImageStyle"/>
+    <classEntry path="pixel.ui.control.DefaultTip"/>
+    <classEntry path="pixel.ui.control.IPixelTip"/>
+    <classEntry path="pixel.ui.control.vo.UIMod"/>
+    <classEntry path="pixel.ui.control.vo.UIStyleMod"/>
+    <classEntry path="pixel.ui.control.style.UIStyleFactory"/>
+    <classEntry path="pixel.ui.control.style.IUIStyleFactory"/>
+    <classEntry path="pixel.ui.control.style.UIGlobalStyleManager"/>
+    <classEntry path="pixel.ui.control.event.PixelUIEvent"/>
+    <classEntry path="pixel.ui.control.vo.UIControlMod"/>
+    <classEntry path="pixel.ui.control.vo.UIStyleGroup"/>
+    <classEntry path="pixel.ui.control.style.UIStyleManager"/>
+    <classEntry path="pixel.ui.control.style.IUIStyleManager"/>
+    <classEntry path="pixel.ui.control.style.UIStyleLinkEmu"/>
+    <classEntry path="pixel.ui.control.asset.PixelAssetEmu"/>
+    <classEntry path="pixel.ui.control.asset.PixelTextureAssetLibrary"/>
+    <classEntry path="pixel.ui.control.UICheckBox"/>
+    <classEntry path="pixel.ui.control.UICheckButton"/>
+    <classEntry path="pixel.ui.control.style.UICheckButtonStyle"/>
+    <classEntry path="pixel.ui.control.UITab"/>
+    <classEntry path="pixel.ui.control.UITabBar"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

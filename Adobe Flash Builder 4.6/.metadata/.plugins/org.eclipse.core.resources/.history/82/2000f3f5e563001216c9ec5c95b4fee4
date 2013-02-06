@@ -1,0 +1,25 @@
+package
+{
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.events.SecurityErrorEvent;
+	import flash.net.URLLoader;
+	import flash.net.URLLoaderDataFormat;
+	import flash.net.URLRequest;
+	import flash.utils.ByteArray;
+	
+	[SWF(width="1280",height="600")]
+	public class Test extends Sprite
+	{
+		public function Test()
+		{
+			var canvas:Sprite = new Sprite();
+			canvas.graphics.beginFill(0x000000,0.8);
+			canvas.graphics.drawRect(0,0,1280,600);
+			canvas.graphics.endFill();
+			
+			addChild(canvas);
+		}
+	}
+}

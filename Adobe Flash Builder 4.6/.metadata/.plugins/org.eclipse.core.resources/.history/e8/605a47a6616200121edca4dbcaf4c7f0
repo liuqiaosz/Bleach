@@ -1,0 +1,15 @@
+package bleach.module.message
+{
+	public class MsgRequest extends MsgGeneric implements IMsgRequest
+	{
+		public function MsgRequest(id:int = 0,charset:String = "utf-8")
+		{
+			super(id,charset);
+		}
+		
+		public function getMessage():Object
+		{
+			return null;
+		}
+	}
+}

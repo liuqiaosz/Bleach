@@ -1,0 +1,14 @@
+package bleach.module.message
+{
+	public class MsgResponse extends MsgGeneric
+	{
+		public function MsgResponse(id:int = 0,charset:String = "utf-8")
+		{
+			super(id,charset);
+		}
+		
+		public function setMessage(data:Object):void
+		{
+		}
+	}
+}

@@ -1,0 +1,14 @@
+package pixel.ui.control
+{
+	public class UICheckBox extends UIContainer
+	{
+		private var _label:UITextBase = null;
+		
+		public function UICheckBox()
+		{
+			super();
+		}
+		
+		
+	}
+}

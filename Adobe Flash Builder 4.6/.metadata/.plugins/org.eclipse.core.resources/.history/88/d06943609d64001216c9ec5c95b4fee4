@@ -1,0 +1,9 @@
+package pixel.ui.control
+{
+	public class UICheckButton extends UIControl
+	{
+		public function UICheckButton()
+		{
+		}
+	}
+}

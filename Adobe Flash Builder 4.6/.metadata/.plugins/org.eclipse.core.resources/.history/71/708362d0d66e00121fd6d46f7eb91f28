@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:AdvanceTitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ui="editor.ui.*" width="500" height="400" title="">
+	
+	<fx:Script>
+		<![CDATA[
+			/**
+			 * 开启右键菜单
+			 * 
+			 **/
+			protected function openContextMenu(event:MouseEvent):void
+			{
+				
+			}
+		]]>
+	</fx:Script>
+	
+	
+	<ui:layout>
+		<s:VerticalLayout />
+	</ui:layout>
+	
+	<s:TextArea id="textPreview" width="400" height="200"  editable="false" selectable="true" rightClick="openContextMenu(event)" />
+	
+</ui:AdvanceTitleWindow>

@@ -1,0 +1,10 @@
+package pixel.ui.control
+{
+	public class UIRadio extends UIControl
+	{
+		public function UIRadio(skin:Class = null)
+		{
+			super(skin ? skin : null);
+		}
+	}
+}

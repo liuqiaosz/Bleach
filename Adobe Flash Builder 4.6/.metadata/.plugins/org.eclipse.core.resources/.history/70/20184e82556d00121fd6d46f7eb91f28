@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:GenericProperty xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ui="editor.ui.*">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.ColorPickerEvent;
+			
+			import pixel.ui.control.UIRadio;
+			import pixel.ui.control.style.UIRadioStyle;
+			private var _control:UIRadio = null;
+			[Bindable]
+			private var _frameSize:int = 6;
+			[Bindable]
+			private var _inlineSize:int = 2;
+			[Bindable]
+			private var _selectColor:uint = 0x000000;
+			[Bindable]
+			private var _focusColor:uint = 0xCCCCCC;
+			[Bindable]
+			private var _focusAlpha:Number = 1;
+			
+			override protected function Initialized():void
+			{
+				_control = CurrentControl as UIRadio;
+				_frameSize = _control.frameSize;
+				_inlineSize = _control.inlineSize;
+				_selectColor = _control.selectColor;
+				_focusColor = _control.focusColor;
+				_focusAlpha = _control.focusAlpha;
+				
+			}
+			
+			protected function frameRadiusChanged(event:Event):void
+			{
+				_control.frameSize = frameRadius.value;
+			}
+			
+			protected function inlineRadiusChanged(event:Event):void
+			{
+				_control.inlineSize = inlineRadius.value;
+			}
+			
+			protected function selectColorChanged(event:ColorPickerEvent):void
+			{
+				_control.selectColor = event.color;
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="外框半径" width="60"/>
+		<s:HSlider id="frameRadius" width="100%" 
+				   stepSize="1" 
+				   minimum="6" 
+				   value="{_frameSize}" 
+				   maximum="50" change="frameRadiusChanged(event)" />
+		<s:Label text="{frameRadius.value}" />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="内框半径" width="60"/>
+		<s:HSlider id="inlineRadius" width="100%" 
+				   stepSize="1" 
+				   minimum="2" 
+				   value="{_inlineSize}" 
+				   maximum="{frameRadius.value}" change="inlineRadiusChanged(event)" />
+		<s:Label text="{inlineRadius.value}" />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="内框背景色" width="60"/>
+		<s:TextInput width="30" text="{selectColor.selectedColor}" />
+		<mx:ColorPicker id="selectColor" 
+						showTextField="true" 
+					    selectedColor="{_selectColor}"
+						change="selectColorChanged(event)" />
+		
+	</s:HGroup>
+	
+	<ui:BordeStyleProperty id="BorderStyle" Control="{CurrentControl}" />
+</ui:GenericProperty>

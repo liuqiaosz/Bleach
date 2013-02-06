@@ -1,0 +1,9 @@
+package pixel.utility.math
+{
+	public class Binary64
+	{
+		public function Binary64()
+		{
+		}
+	}
+}

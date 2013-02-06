@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="pixel.utility.bitmap.gif.GIFDecoder"/>
+    <classEntry path="pixel.utility.bitmap.gif.GIFFrame"/>
+    <classEntry path="pixel.utility.GraphicsTools"/>
+    <classEntry path="pixel.utility.data.QuadTree"/>
+    <classEntry path="pixel.utility.data.QuadNode"/>
+    <classEntry path="pixel.utility.PixelUtilityNS"/>
+    <classEntry path="pixel.utility.data.Tree"/>
+    <classEntry path="pixel.utility.ShareObjectHelper"/>
+    <classEntry path="pixel.utility.ShareDisk"/>
+    <classEntry path="pixel.utility.math.Binary64"/>
+    <classEntry path="pixel.utility.math.Int64"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

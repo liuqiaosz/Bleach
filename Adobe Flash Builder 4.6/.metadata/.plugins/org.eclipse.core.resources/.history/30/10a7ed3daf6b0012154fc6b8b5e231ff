@@ -1,0 +1,9 @@
+package bleach.event
+{
+	public class BleachProgressEvent
+	{
+		public function BleachProgressEvent()
+		{
+		}
+	}
+}

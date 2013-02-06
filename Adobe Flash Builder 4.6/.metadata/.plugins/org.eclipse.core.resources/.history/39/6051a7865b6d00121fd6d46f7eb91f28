@@ -1,0 +1,20 @@
+package pixel.ui.control
+{
+	import pixel.ui.control.style.IVisualStyle;
+	import pixel.ui.control.style.UIProgressNewStyle;
+
+	public class UIProgressNew extends UIControl
+	{
+		
+		public function UIProgressNew(skin:Class = null)
+		{
+			super(skin ? skin:UIProgressNewStyle);
+		}
+		
+		override protected function StyleRender(Style:IVisualStyle):void
+		{
+			
+		}
+			
+	}
+}

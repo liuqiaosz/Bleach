@@ -1,0 +1,9 @@
+package pixel.ui.control
+{
+	public class UIProgressNew
+	{
+		public function UIProgressNew()
+		{
+		}
+	}
+}

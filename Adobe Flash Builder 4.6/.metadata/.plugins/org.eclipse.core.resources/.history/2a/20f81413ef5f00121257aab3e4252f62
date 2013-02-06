@@ -1,0 +1,26 @@
+package
+{
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.system.ApplicationDomain;
+
+	public class Test extends Sprite
+	{
+		public function Test()
+		{
+			this.addEventListener(Event.ADDED_TO_STAGE,function(event:Event):void{
+				traceDomain();
+			});
+		}
+		
+		private function traceDomain():void
+		{
+			
+			var vec:Vector.<String> = ApplicationDomain.currentDomain.getQualifiedDefinitionNames();
+			for each(var nm:String in vec)
+			{
+				trace(nm);
+			}
+		}
+	}
+}

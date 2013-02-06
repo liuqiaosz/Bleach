@@ -1,0 +1,20 @@
+package
+{
+	import flash.display.Loader;
+	import flash.display.Sprite;
+	import flash.events.Event;
+	import flash.events.MouseEvent;
+	import flash.net.URLRequest;
+	import flash.system.ApplicationDomain;
+	import flash.system.LoaderContext;
+
+	public class Test extends Sprite
+	{
+		public function Test()
+		{
+			
+		}
+		
+		
+	}
+}

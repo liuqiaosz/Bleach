@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:GenericProperty xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					xmlns:s="library://ns.adobe.com/flex/spark" 
+					xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ui="editor.ui.*">
+	<fx:Declarations>
+		<!-- 将非可视元素（例如服务、值对象）放在此处 -->
+	</fx:Declarations>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="外框半径" width="60"/>
+		<s:HSlider width="100%" stepSize="1" minimum="6" maximum="50" />
+		<s:Label />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="内框半径" width="60"/>
+		<s:HSlider width="100%" stepSize="1" minimum="2" maximum="50" />
+		<s:Label />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="内框背景色" width="60"/>
+		<mx:ColorPicker showTextField="true" />
+	</s:HGroup>
+	
+	<ui:BordeStyleProperty id="BorderStyle" Control="{CurrentControl}" />
+</ui:GenericProperty>

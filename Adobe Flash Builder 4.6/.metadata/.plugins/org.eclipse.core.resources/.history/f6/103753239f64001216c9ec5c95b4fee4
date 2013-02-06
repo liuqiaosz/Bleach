@@ -1,0 +1,29 @@
+package pixel.ui.control
+{
+	import pixel.ui.control.style.IVisualStyle;
+	import pixel.ui.control.style.UICheckButtonStyle;
+	import pixel.ui.core.PixelUINS;
+
+	use namespace PixelUINS;
+	
+	/**
+	 * 复选框
+	 **/
+	public class UICheckButton extends UIControl
+	{
+		private var _selected:Boolean = false;
+		
+		public function UICheckButton(style:Class = null)
+		{
+			super(style ? style:UICheckButtonStyle);
+		}
+		
+		/**
+		 * 自定义渲染
+		 **/
+		override protected function StyleRender(Style:IVisualStyle):void
+		{
+			
+		}
+	}
+}

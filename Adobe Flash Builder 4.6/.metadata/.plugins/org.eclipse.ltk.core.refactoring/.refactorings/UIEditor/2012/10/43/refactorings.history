@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="将资源“UIEditor/bin-debug/Preference.cfg”重命名为“Preference.cfg.bak”" description="重命名资源“Preference.cfg”" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="bin-debug/Preference.cfg" name="Preference.cfg.bak" stamp="1351266951846" updateReferences="true"/>
+</session>

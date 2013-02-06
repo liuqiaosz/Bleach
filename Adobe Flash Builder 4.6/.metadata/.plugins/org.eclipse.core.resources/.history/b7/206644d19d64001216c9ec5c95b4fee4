@@ -1,0 +1,9 @@
+package pixel.ui.control.style
+{
+	public class UICheckButtonStyle extends UIStyle
+	{
+		public function UICheckButtonStyle()
+		{
+		}
+	}
+}

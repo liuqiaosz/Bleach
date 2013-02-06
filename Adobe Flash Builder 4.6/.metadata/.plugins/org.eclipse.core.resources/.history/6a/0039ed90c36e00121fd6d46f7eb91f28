@@ -1,0 +1,60 @@
+package pixel.ui.control
+{
+	import flash.text.TextFormat;
+	
+	import pixel.ui.control.vo.ColorFormat;
+
+	/**
+	 * 多彩文本支持
+	 * 
+	 **/
+	public class UIColorfulLabel extends UITextBase
+	{
+		private var formats:Vector.<ColorFormat> = null;
+		public function UIColorfulLabel()
+		{
+			super();
+			formats = new Vector.<ColorFormat>();
+		}
+		
+		/**
+		 * 文本分析
+		 * 
+		 **/
+		protected function formatAnalysis(value:String):void
+		{
+			var str:String = "我是红色,我是绿色，我是蓝色";
+		}
+		
+		/**
+		 * 添加文字格式
+		 **/
+		public function addColorFormat(format:ColorFormat):void
+		{
+			formats.push(format);
+		}
+		
+		override public function set text(value:String):void
+		{
+			super.text = value;
+			formatUpdate();
+		}
+		
+		protected function textFormatUpdate():void
+		{
+			var format:ColorFormat = null;
+			var txtFormat:TextFormat = null;
+			for each(format in formats)
+			{
+				txtFormat.color = format.color;
+				txtFormat.size = format.size;
+				if(format.isLink)
+				{
+					txtFormat.url = "event:" + format.linkId;
+					txtFormat.underline = true;
+				}
+				_TextField.setTextFormat(txtFormat,format.startIndex,format.endIndex);
+			}
+		}
+	}
+}

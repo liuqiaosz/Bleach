@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:AdvanceTitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ui="editor.ui.*" width="500" height="400" title="">
+	
+	<fx:Script>
+		<![CDATA[
+			import pixel.ui.control.UIColorfulLabel;
+			
+			private var _control:UIColorfulLabel = null;
+			public function set control(value:UIColorfulLabel):void
+			{
+				_control = value;
+				var text:TextField = new TextField();
+				text.text = _control.text;
+				
+				fieldContainer.addChild(text);
+			}
+			
+			/**
+			 * 开启右键菜单
+			 * 
+			 **/
+			protected function openContextMenu(event:MouseEvent):void
+			{
+				
+			}
+		]]>
+	</fx:Script>
+	
+	
+	<ui:layout>
+		<s:VerticalLayout />
+	</ui:layout>
+	<mx:UIComponent id="fieldContainer" width="400" height="300">
+		
+	</mx:UIComponent>
+</ui:AdvanceTitleWindow>

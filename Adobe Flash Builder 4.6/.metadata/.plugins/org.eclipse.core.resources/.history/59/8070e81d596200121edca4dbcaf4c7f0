@@ -1,0 +1,12 @@
+package bleach.module.message
+{
+	public class MsgHeartBeatResp extends MsgGeneric
+	{
+		private var _stamp:Number = 0;
+		private var _timestamp:Int64 = null;
+		public function MsgHeartBeatResp()
+		{
+			super(MsgIdConstants.MSG_HEARTBEAT_RESP);
+		}
+	}
+}

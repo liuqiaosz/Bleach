@@ -1,0 +1,19 @@
+package
+{
+	public class Test
+	{
+		public function Test()
+		{
+		}
+		
+		private function traceDomain():void
+		{
+			
+			var vec:Vector.<String> = ApplicationDomain.currentDomain.getQualifiedDefinitionNames();
+			for each(var nm:String in vec)
+			{
+				trace(nm);
+			}
+		}
+	}
+}

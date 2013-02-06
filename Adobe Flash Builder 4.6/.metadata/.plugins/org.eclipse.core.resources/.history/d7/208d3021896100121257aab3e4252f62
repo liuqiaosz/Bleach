@@ -1,0 +1,112 @@
+package bleach.communicator
+{
+	import bleach.message.BleachNetMessage;
+	import bleach.module.message.IMsg;
+	
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.events.IOErrorEvent;
+	import flash.events.ProgressEvent;
+	import flash.events.SecurityErrorEvent;
+	import flash.net.Socket;
+	import flash.utils.ByteArray;
+
+	public class TCPCommunicator extends GenericCommunicator implements ITCPCommunicator
+	{
+		private var _connected:Boolean = false;
+		private var _channel:Socket = null;
+		public function TCPCommunicator()
+		{
+			super();
+		}
+		
+		/**
+		 * 
+		 * 连接网络
+		 * 
+		 **/
+		public function connect(ip:String = "",port:int = 9090,encode:String = ""):void
+		{
+			if(_channel)
+			{
+				close();
+			}
+			_channel = new Socket();
+			_channel.addEventListener(Event.CONNECT,channelConnected);
+			_channel.addEventListener(IOErrorEvent.IO_ERROR,channelIoError);
+			_channel.addEventListener(SecurityErrorEvent.SECURITY_ERROR,channelSecurityError);
+			_channel.addEventListener(ProgressEvent.SOCKET_DATA,channelProgressData);
+			_channel.connect(ip,port);
+		}
+		
+		//是否断包，沾包处理
+		private var process:Boolean = false;
+		private var packLength:int = 0;
+		private var length:int = 0;
+		private var dataBuffer:ByteArray = new ByteArray();
+		private var command:int = 0;
+		/**
+		 * 有数据包到达
+		 **/
+		private function channelProgressData(event:ProgressEvent):void
+		{
+			if(process)
+			{
+				//计算剩余数据长度
+				len = packLength - dataBuffer.length;
+				if(event.bytesLoaded < len)
+				{
+					//缓存的数据小于需要读取的长度则读取当前所有数据，剩余的数据等待下一封包数据到达继续读取
+					len = event.bytesLoaded;
+				}
+				_channel.readBytes(dataBuffer,0,len);
+				if(dataBuffer.length == packLength)
+				{
+					//消息读取完毕
+				}
+			}
+			//获取报文长度
+			var len:int = _channel.readInt();
+			//消息ID
+			var id:int = _channel.readInt();
+			
+			dataBuffer
+		}
+		
+		private function channelConnected(event:Event):void
+		{
+			_connected = true;
+			this.dispatchMessage(new BleachNetMessage(BleachNetMessage.BLEACH_NET_CONNECTED));
+		}
+		private function channelIoError(event:IOErrorEvent):void
+		{
+			trace(event.text);
+		}
+		private function channelSecurityError(event:SecurityErrorEvent):void
+		{
+			trace(event.text);
+		}
+		
+		public function isConnected():Boolean
+		{
+			return _connected;
+		}
+		
+		public function close():void
+		{
+			if(_channel)
+			{
+				_channel.close();
+				_channel.removeEventListener(Event.CONNECT,channelConnected);
+				_channel.removeEventListener(IOErrorEvent.IO_ERROR,channelIoError);
+				_channel.removeEventListener(SecurityErrorEvent.SECURITY_ERROR,channelSecurityError);
+				_channel = null;
+				_connected = false;
+			}
+		}
+		public function sendMessage(msg:IMsg):void
+		{}
+		public function sendString(value:String):void
+		{}
+	}
+}

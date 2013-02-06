@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<bleach>
+	<system>
+		<!-- 心跳间隔 -->
+		<heartbeat>60000</heartbeat>
+		<!-- 心跳超时 -->
+		<heartbeattimeout>10000</heartbeattimeout>
+		<!-- 服务器IP 端口 -->
+		<remotehost>219.234.0.12</remotehost>
+		<remoteport>33445</remoteport>
+		
+		<!-- 
+			接入类型
+			
+			0:	平台
+			1:	QQ
+			2:	xx
+		 -->
+		<portal>0</portal>
+	</system>
+
+	<scenes>
+		<scene id="loginScene" version="1.0" url="bleach/scene/LoginScene.swf">
+			<!-- 链接库 --> 
+			<library id="LoginRes" version="1.0" url="login.swf" desc="UI资源" uilib="true" />
+			<library id="LoginUI" version="1.0" url="UI.swf" desc="UI定义" />
+		</scene>
+		
+		<scene id="WorldScene" version="1.0" url="bleach/scene/WorldScene.swf">
+			<library id="battle(new).swf" version="1.0" url="battle(new).swf" desc="资源" />
+		</scene>
+	</scenes>
+</bleach>

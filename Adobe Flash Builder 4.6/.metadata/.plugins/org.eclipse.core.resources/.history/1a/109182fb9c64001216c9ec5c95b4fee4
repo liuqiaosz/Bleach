@@ -1,0 +1,10 @@
+package pixel.ui.control
+{
+	public class UICheckBox extends UIContainer
+	{
+		public function UICheckBox()
+		{
+			super();
+		}
+	}
+}

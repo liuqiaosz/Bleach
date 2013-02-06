@@ -1,0 +1,9 @@
+package bleach
+{
+	public class Debuger
+	{
+		public function Debuger()
+		{
+		}
+	}
+}

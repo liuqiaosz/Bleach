@@ -1,0 +1,9 @@
+package pixel.utility.math
+{
+	public class Int64
+	{
+		public function Int64()
+		{
+		}
+	}
+}

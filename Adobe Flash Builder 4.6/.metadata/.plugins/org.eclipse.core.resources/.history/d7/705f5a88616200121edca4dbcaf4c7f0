@@ -1,0 +1,7 @@
+package bleach.module.message
+{
+	public interface IMsgResponse extends IMsg
+	{
+		function setMessage(data:ByteArray):void;
+	}
+}

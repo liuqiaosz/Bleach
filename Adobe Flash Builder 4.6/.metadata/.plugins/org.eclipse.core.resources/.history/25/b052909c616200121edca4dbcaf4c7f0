@@ -1,0 +1,7 @@
+package bleach.module.message
+{
+	public interface IMsgRequest extends IMsg
+	{
+		function getMessage():ByteArray;
+	}
+}

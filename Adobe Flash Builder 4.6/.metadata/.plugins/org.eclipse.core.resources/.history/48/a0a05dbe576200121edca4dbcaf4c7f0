@@ -1,0 +1,32 @@
+package bleach.module.message
+{
+	import flash.utils.ByteArray;
+	
+	import pixel.utility.math.Int64;
+
+	public class MsgHeartBeat extends MsgGeneric
+	{
+		private var _stamp:Number = 0;
+		private var _timestamp:Int64 = null;
+		public function set timestamp(value:Number):void
+		{
+			_stamp = value;
+			_timestamp = Int64.fromNumber(value);
+		}
+		public function get timestamp():Number
+		{
+			return _timestamp;
+		}
+		public function MsgHeartBeat()
+		{
+			super(MsgIdConstants.MSG_HEARTBEAT);
+		}
+		
+		override public function getMessage():Object
+		{
+			var data:ByteArray = new ByteArray();
+			
+			return data;
+		}
+	}
+}

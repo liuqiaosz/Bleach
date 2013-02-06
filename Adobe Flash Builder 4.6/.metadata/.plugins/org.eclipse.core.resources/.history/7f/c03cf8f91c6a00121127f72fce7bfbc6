@@ -1,0 +1,14 @@
+package pixel.ui.control
+{
+	public class UITab extends UIContainer
+	{
+		public function UITab()
+		{
+			this.Layout = LayoutConstant.VERTICAL;
+		}
+		
+		override final public function set Layout(Value:uint):void
+		{
+		}
+	}
+}

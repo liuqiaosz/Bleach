@@ -1,0 +1,14 @@
+package pixel.ui.control.style
+{
+	/**
+	 * 复选框按钮样式
+	 * 
+	 **/
+	public class UICheckButtonStyle extends UIStyle
+	{
+		public function UICheckButtonStyle()
+		{
+			super();
+		}
+	}
+}

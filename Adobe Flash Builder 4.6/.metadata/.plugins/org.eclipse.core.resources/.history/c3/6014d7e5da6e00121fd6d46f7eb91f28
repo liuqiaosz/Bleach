@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ui:AdvanceTitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+					   xmlns:s="library://ns.adobe.com/flex/spark" 
+					   xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:ui="editor.ui.*" width="500" height="400" title="" xmlns:ui1="editor.uitility.ui.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import pixel.ui.control.UIColorfulLabel;
+			
+			private var _control:UIColorfulLabel = null;
+			private var _textField:TextField = null;
+			public function set control(value:UIColorfulLabel):void
+			{
+				_control = value;
+				_textField = new TextField();
+				_textField.text = _control.text;
+				_textField.width = 400;
+				_textField.height = 200;
+				_textField.multiline = true;
+				fieldContainer.addChild(_textField);
+				
+				_textField.addEventListener(MouseEvent.MOUSE_DOWN,onDragStart);
+			}
+			
+			private function onDragStart(event:MouseEvent):void
+			{
+				stage.addEventListener(MouseEvent.MOUSE_MOVE,onDragMove);
+				stage.addEventListener(MouseEvent.MOUSE_UP,stopDragMove);
+			}
+			
+			private function onDragMove(event:MouseEvent):void
+			{
+				startIndex.text = _textField.selectionBeginIndex + "";
+				endIndex.text = _textField.selectionEndIndex + "";
+			}
+			private function stopDragMove(event:MouseEvent):void
+			{
+				stage.removeEventListener(MouseEvent.MOUSE_MOVE,onDragMove);
+				stage.removeEventListener(MouseEvent.MOUSE_UP,stopDragMove);
+			}
+			
+			/**
+			 * 开启右键菜单
+			 * 
+			 **/
+			protected function openContextMenu(event:MouseEvent):void
+			{
+				
+			}
+		]]>
+	</fx:Script>
+	
+	
+	<ui:layout>
+		<s:VerticalLayout />
+	</ui:layout>
+	<s:BorderContainer width="1" width="400" height="200">
+		<mx:UIComponent id="fieldContainer">
+			
+		</mx:UIComponent>
+	</s:BorderContainer>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="开始位置" width="60"/>
+		<s:Label id="startIndex"/>
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="结束位置" width="60"/>
+		<s:Label id="endIndex"/>
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="文字颜色" width="60"/>
+		<ui1:AdvanceColorPicker />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="文字大小" width="60"/>
+		<ui1:AdvanceHSlider minimum="12" stepSize="1" maximum="50" />
+	</s:HGroup>
+	
+	<s:HGroup verticalAlign="middle">
+		<s:Label text="链接模式" width="60"/>
+		<s:ComboBox>
+			<s:ArrayCollection>
+				<fx:String>否</fx:String>
+				<fx:String>是</fx:String>
+			</s:ArrayCollection>
+		</s:ComboBox>
+	</s:HGroup>
+	
+</ui:AdvanceTitleWindow>

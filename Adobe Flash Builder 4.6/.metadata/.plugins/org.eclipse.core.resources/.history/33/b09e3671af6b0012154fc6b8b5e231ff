@@ -1,0 +1,13 @@
+package bleach.event
+{
+	import flash.events.Event;
+
+	public class BleachProgressEvent extends Event
+	{
+		public static const BLEACH_DOWNLOAD_PROGRESS:String = "DownloadProgress";
+		public function BleachProgressEvent(type:String,bubbles:Boolean = true)
+		{
+			super(type,bubbles);
+		}
+	}
+}

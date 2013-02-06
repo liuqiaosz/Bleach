@@ -1,0 +1,22 @@
+package pixel.ui.control
+{
+	public class UICheckBox extends UIContainer
+	{
+		private var _btn:UICheckButton = null;
+		private var _label:UITextBase = null;
+		
+		public function UICheckBox()
+		{
+			super();
+			super.Layout = LayoutConstant.HORIZONTAL;
+			_btn = new UICheckButton();
+			addChild(_btn);
+			_label = new UITextBase();
+			addChild(_label);
+		}
+		
+		override public function set Layout(Value:uint):void
+		{
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package bleach.module.message
+{
+	import flash.utils.ByteArray;
+
+	public class MsgLoginResp extends MsgGeneric
+	{
+		private var _respCode:int = -1;
+		public function MsgLoginResp()
+		{
+			super();
+		}
+		
+		override public function setMessage(data:Object):void
+		{
+			//trace(ByteArray(data).readUTFBytes(ByteArray(data).bytesAvailable);
+		}
+	}
+}

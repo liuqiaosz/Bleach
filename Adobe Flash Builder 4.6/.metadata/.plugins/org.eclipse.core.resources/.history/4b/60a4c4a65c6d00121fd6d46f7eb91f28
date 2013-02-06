@@ -1,0 +1,49 @@
+package pixel.ui.control
+{
+	import flash.display.Graphics;
+	
+	import pixel.ui.control.style.IVisualStyle;
+	import pixel.ui.control.style.UIProgressNewStyle;
+
+	public class UIProgressNew extends UIControl
+	{
+		public function set barColor(value:uint):void
+		{
+			UIProgressNewStyle(_Style).barColor = value;
+			Update();
+		}
+		public function get barColor():uint
+		{
+			return UIProgressNewStyle(_Style).barColor;
+		}
+		
+		public function set barAlpha(value:Number):void
+		{
+			UIProgressNewStyle(_Style).barAlpha = value;
+			Update();
+		}
+		public function get barAlpha():Number
+		{
+			return UIProgressNewStyle(_Style).barAlpha;
+		}
+		public function UIProgressNew(skin:Class = null)
+		{
+			super(skin ? skin:UIProgressNewStyle);
+		}
+		
+		override protected function StyleRender(Style:IVisualStyle):void
+		{
+			var style:UIProgressNewStyle = Style as UIProgressNewStyle;
+			var pen:Graphics = this.graphics;
+			pen.clear();
+			
+			if(style.BorderThinkness > 0)
+			{
+				pen.lineStyle(style.BorderThinkness,style.BorderColor,style.BorderAlpha,true);
+			}
+			pen.beginFill(style.BackgroundColor,style.BackgroundAlpha);
+			
+		}
+			
+	}
+}

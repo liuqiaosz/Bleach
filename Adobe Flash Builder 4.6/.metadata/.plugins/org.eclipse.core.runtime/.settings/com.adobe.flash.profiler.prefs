@@ -1,0 +1,7 @@
+#Sat Jan 19 23:49:14 GMT+08:00 2013
+com.adobe.flash.profiler.Browser=/Applications/Safari.app
+com.adobe.flash.profiler.LaunchURL,com.adobe.flash.profiler.ui.Monitor=,/Users/LiuQiao/Documents/Developer/Code/flash/Bleach/bin-debug/Bleach.html,
+com.adobe.flash.profiler.preference.warning.TabbedBrowsing=always
+eclipse.preferences.version=1
+com.adobe.flash.profiler.Includes=,
+saveViewIDs=com.adobe.flash.profiler.ui.LiveObjects,2,com.adobe.flash.profiler.ext.ui.MemoryUsageGraph,2,com.adobe.flash.profiler.ui.LiveObjects,3,com.adobe.flash.profiler.ext.ui.MemoryUsageGraph,3,com.adobe.flash.profiler.ui.LiveObjects,4,com.adobe.flash.profiler.ext.ui.MemoryUsageGraph,4,com.adobe.flash.profiler.ui.LiveObjects,5,com.adobe.flash.profiler.ext.ui.MemoryUsageGraph,5,com.adobe.flash.profiler.ui.LiveObjects,6,com.adobe.flash.profiler.ext.ui.MemoryUsageGraph,6,

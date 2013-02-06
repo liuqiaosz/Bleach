@@ -1,0 +1,20 @@
+package pixel.ui.control
+{
+	import pixel.ui.core.PixelUINS;
+
+	use namespace PixelUINS;
+	
+	public class UITab extends UIContainer
+	{
+		private var _bar:UITabBar = null;
+		
+		public function UITab()
+		{
+			this.Layout = LayoutConstant.VERTICAL;
+		}
+		
+		override final public function set Layout(Value:uint):void
+		{
+		}
+	}
+}

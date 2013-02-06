@@ -1,0 +1,35 @@
+package
+{
+	import flash.display.Sprite;
+
+	public class Test extends Sprite
+	{
+		public function Test()
+		{
+			traceDomain();
+			var loader:flash.display.Loader = new flash.display.Loader();
+			loader.contentLoaderInfo.addEventListener(Event.COMPLETE,function(event:Event):void{
+				stage.addEventListener(MouseEvent.CLICK,function(event:MouseEvent):void{
+					traceDomain();
+				});
+				
+				traceDomain();
+				
+				loader.unload();
+				loader = null;
+			});
+			var ctx:LoaderContext = new LoaderContext();
+			ctx.applicationDomain = ApplicationDomain.currentDomain;
+			loader.load(new URLRequest("login.swf"),ctx);
+		}
+		
+		private function traceDomain():void
+		{
+			var vec:Vector.<String> = ApplicationDomain.currentDomain.getQualifiedDefinitionNames();
+			for each(var nm:String in vec)
+			{
+				trace(nm);
+			}
+		}
+	}
+}

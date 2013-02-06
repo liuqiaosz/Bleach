@@ -1,0 +1,28 @@
+package pixel.ui.control.style
+{
+	public class UIRadioStyle extends UIStyle
+	{
+		private var _focusColor:uint = 0x5d5d5d;
+		public function set focusColor(value:uint):void
+		{
+			_focusColor = value;
+		}
+		public function get focusColor():uint
+		{
+			return _focusColor
+		}
+		private var _focusAlpha:Number = 0.8;
+		public function set focusAlpha(value:Number):void
+		{
+			_focusAlpha = value;
+		}
+		public function get focusAlpha():Number
+		{
+			return _focusAlpha
+		}
+		public function UIRadioStyle()
+		{
+			super();
+		}
+	}
+}
