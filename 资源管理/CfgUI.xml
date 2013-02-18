@@ -5,4 +5,6 @@
 	<bytearray file="choose_role/choose_role.mod" class="ui.chooserole"/>
 	<bytearray file="room_square/RoomSquare.mod" class="ui.roomsquare"/>
 	<bytearray file="world/Worldmap.mod" class="ui.world"/>
+	<bytearray file="battleroom/challenge.mod" class="ui.room.challenge" />
+	<bytearray file="battleroom/athletics.mod" class="ui.room.athletics" />
 </lib>

@@ -10,4 +10,5 @@
 	<bytearray file="/Users/LiuQiao/Documents/Developer/Code/flash/Bleach/response_code.xml" class="BleachErrorCode"/>
 	
 	<bytearray file="common/common.mod" class="ui.common"/>
+	<bytearray file="common/createRoom.mod" class="ui.createroom"/>
 </lib>
