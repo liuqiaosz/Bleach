@@ -11,4 +11,5 @@
 	
 	<bytearray file="common/common.mod" class="ui.common"/>
 	<bytearray file="common/createRoom.mod" class="ui.createroom"/>
+	<bytearray file="common/choosemap.mod" class="ui.choosemap"/>
 </lib>
