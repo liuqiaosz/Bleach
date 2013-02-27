@@ -7,4 +7,5 @@
 	<bytearray file="world/Worldmap.mod" class="ui.world"/>
 	<bytearray file="battleroom/challenge.mod" class="ui.room.challenge" />
 	<bytearray file="battleroom/athletics.mod" class="ui.room.athletics" />
+	<bytearray file="role/role.mod" class="ui.role" />
 </lib>
